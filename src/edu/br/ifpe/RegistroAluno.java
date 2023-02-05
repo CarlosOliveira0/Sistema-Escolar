@@ -1,25 +1,20 @@
 package edu.br.ifpe;
 
-public class RegistroAluno {
+public class RegistroAluno extends Aluno {
 	
-	private Aluno aluno;
 	private double nota1;
 	private double nota2;
 	private double media;
 	private double recuperacao;
 	private double mediaFinal;
 
-	public void RegistroDeAluno(Aluno aluno, double nota1, double nota2, double media, double recuperacao, double mediaFinal) {
-	    this.aluno = aluno;
-	    this.nota1 = 0;
-	    this.nota2 = 0;
+	public RegistroAluno(String nome, int matricula, double nota1, double nota2, double media, double recuperacao, double mediaFinal) {
+	    super(nome, matricula);
+	    this.nota1 = nota1;
+	    this.nota2 = nota2;
 	    this.media = 0;
 	    this.recuperacao = 0;
 	    this.mediaFinal = 0;
-	 }
-
-	 public Aluno getAluno() {
-	    return aluno;
 	 }
 
 	 public void setNota1(double nota1) {
