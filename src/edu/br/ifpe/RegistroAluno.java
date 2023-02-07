@@ -5,54 +5,46 @@ public class RegistroAluno extends Aluno {
 	private double nota1;
 	private double nota2;
 	private double media;
-	private double recuperacao;
-	private double mediaFinal;
 
-	public RegistroAluno(String nome, String matricula, double nota1, double nota2,
-			double media, double recuperacao, double mediaFinal) {
+	public RegistroAluno(String nome,String email, String cpf, double nota1, double nota2,
+			double media) {
 	   
-		super(nome);
+		super(nome, email, cpf);
 	    this.nota1 = nota1;
 	    this.nota2 = nota2;
-	    this.media = 0;
-	    this.recuperacao = 0;
-	    this.mediaFinal = 0;
+	    this.media = (nota1 + nota2) / 2;;
 	 }
 
-	 public void setNota1(double nota1) {
-		 this.nota1 = nota1;
-		 this.calcularMedia();
-	 }
-		  
-	 public void setNota2(double nota2) {
-		  this.nota2 = nota2;
-		  this.calcularMedia();
-	 }
-		  
-	 public void setRecuperacao(double recuperacao) {
-		   this.recuperacao = recuperacao;
-		   this.calcularMediaFinal();
-	 }
-		  
-	 private void calcularMedia() {
-		 this.media = (this.nota1 + this.nota2) / 2;
-	 }
-		  
-	 private void calcularMediaFinal() {
-		  this.mediaFinal = (this.media + this.recuperacao) / 2;
-	 }
-		  
+	public double getNota2() {
+		return nota2;
+	}
+	
+	
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+	
+	
+	public double getNota1() {
+		return nota1;
+	}
+	
+	
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+	}
+ 
 	 public double getMedia() {
-		  return this.media;
+
+		return this.media;
 	 }
-		  
-	 public double getMediaFinal() {
-		  return this.mediaFinal;
-	 }
-	 
+
+
 	 @Override
 	 public String getMatricula() {
-		 return super.getMatricula();
+		return super.getMatricula();
 	 }
+
+
 	 
 }

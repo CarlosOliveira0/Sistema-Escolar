@@ -1,5 +1,52 @@
 package edu.br.ifpe;
 
-public class Turma  {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Turma {
 	
+	   private static int contador = 0;
+	   private int idTurma;
+	   private String nome;
+	   private List<RegistroAluno> registrosAlunos;
+	   private Professor professor;
+
+	   public Turma(String nome, Professor professor) {
+	      this.nome = nome;
+	      this.professor = professor;
+	      this.idTurma = geraProximoIdTurma();
+	      this.registrosAlunos = new ArrayList<>();
+	   }
+
+	   private int geraProximoIdTurma() {
+	      return ++contador;
+	   }
+
+	   public void adicionarRegistroAluno(RegistroAluno registroAluno) {
+	      this.registrosAlunos.add(registroAluno);
+	   }
+
+	   public List<RegistroAluno> getRegistrosAlunos() {
+	      return this.registrosAlunos;
+	   }
+
+	   public String getNome() {
+	      return this.nome;
+	   }
+
+	   public Professor getProfessor() {
+	      return this.professor;
+	   }
+
+	   public void setProfessor(Professor professor) {
+	      this.professor = professor;
+	   }
+
+	   public int getIdTurma() {
+		   return idTurma;
+	   }
+
+	   public void setIdTurma(int idTurma) {
+		   this.idTurma = idTurma;
+	   }
 }
