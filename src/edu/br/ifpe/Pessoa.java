@@ -2,27 +2,17 @@ package edu.br.ifpe;
 
 public class Pessoa {
 	
-	private int id;
     private String nome;
-    private int idade;
-    private String endereco;
+    private String matricula;
 
-    public Pessoa(int id, String nome, int idade, String endereco) {
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
-        this.endereco = endereco;
-    }
 
-    public int getId() {
-        return id;
-    }
+	public Pessoa(String nome, String matricula) {
+		this.nome = nome;
+	    this.matricula = matricula;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public String getNome() {
+	public String getNome() {
         return nome;
     }
 
@@ -30,20 +20,13 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public String getMatricula() {
+        return matricula;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
 }
 

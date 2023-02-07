@@ -1,14 +1,15 @@
 package edu.br.ifpe;
 
 public class Aluno extends Pessoa {
-	private int matricula;
 
-	public Aluno(int id, String nome, int matricula, int idade, String endereco) {
-		super(id, nome, idade, endereco);
-	    this.matricula = matricula;
-	}
+    private static int contador = 0;
 
-	public int getMatricula() {
-		return matricula;
-	}
+    public Aluno(String nome) {
+        super(nome, "20221Y6-RC" + String.format("%04d", ++contador));
+    }
+
+    @Override
+    public String getMatricula() {
+        return super.getMatricula();
+    }
 }

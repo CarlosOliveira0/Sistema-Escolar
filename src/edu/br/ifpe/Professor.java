@@ -1,18 +1,19 @@
 package edu.br.ifpe;
 
 public class Professor extends Pessoa {
-    private String siape;
+	private String disciplina;
 
-    public Professor(int id, String nome, int idade, String endereco, String siape) {
-        super(id, nome, idade, endereco);
-        this.siape = siape;
+    public Professor(String nome, String matricula, String disciplina) {
+        super(nome, matricula);
+        this.disciplina = disciplina;
     }
 
-    public String getSiape() {
-        return siape;
-    }
+	public String getDisciplina() {
+		return disciplina;
+	}
 
-    public void setSiape(String siape) {
-        this.siape = siape;
-    }
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
+	}
+
 }

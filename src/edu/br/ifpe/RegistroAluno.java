@@ -8,8 +8,10 @@ public class RegistroAluno extends Aluno {
 	private double recuperacao;
 	private double mediaFinal;
 
-	public RegistroAluno(String nome, int matricula, double nota1, double nota2, double media, double recuperacao, double mediaFinal) {
-	    super(nome, matricula);
+	public RegistroAluno(String nome, String matricula, double nota1, double nota2,
+			double media, double recuperacao, double mediaFinal) {
+	   
+		super(nome);
 	    this.nota1 = nota1;
 	    this.nota2 = nota2;
 	    this.media = 0;
@@ -47,4 +49,10 @@ public class RegistroAluno extends Aluno {
 	 public double getMediaFinal() {
 		  return this.mediaFinal;
 	 }
- }
+	 
+	 @Override
+	 public String getMatricula() {
+		 return super.getMatricula();
+	 }
+	 
+}
