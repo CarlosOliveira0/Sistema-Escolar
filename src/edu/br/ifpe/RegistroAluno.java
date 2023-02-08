@@ -6,8 +6,7 @@ public class RegistroAluno extends Aluno {
 	private double nota2;
 	private double media;
 
-	public RegistroAluno(String nome,String email, String cpf, double nota1, double nota2,
-			double media) {
+	public RegistroAluno(String nome,String email, String cpf, double nota1, double nota2) {
 	   
 		super(nome, email, cpf);
 	    this.nota1 = nota1;
