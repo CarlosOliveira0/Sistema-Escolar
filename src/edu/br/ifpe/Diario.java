@@ -3,7 +3,7 @@ package edu.br.ifpe;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Turma {
+public class Diario {
 	
 	   private static int contador = 0;
 	   private int idTurma;
@@ -11,7 +11,7 @@ public class Turma {
 	   private List<RegistroAluno> registrosAlunos;
 	   private Professor professor;
 
-	   public Turma(String nome, Professor professor) {
+	   public Diario(String nome, Professor professor) {
 	      this.nome = nome;
 	      this.professor = professor;
 	      this.idTurma = geraProximoIdTurma();
